@@ -1,61 +1,133 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My project</title>
+    <title>League of Legends - Home</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 20px;
+            font-size: 16px;
             background-color: #f0f0f0;
         }
-        h1 {
-            color: #333;
+
+        header {
+            background-color: #6b0000;
+            padding: 20px;
         }
-        p {
+
+        nav {
+            background-color: #00475a;
+            padding: 10px;
+            display: inline-block;
+            width: 80%;
+        }
+
+        nav img {
+            width: 10%;
+        }
+
+        main {
+            background-color: #ffffff;
             font-size: 18px;
-            color: #555;
-            max-width: 600px;
-            margin: 20px auto;
-        }
-        img {
-            max-width: 20%;
-            height: auto;
-            border-radius: 10px;
-           display: block;
-            margin: 0 auto;
-        }
-            .gallery {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .gallery img {
-            width: 200px;
-            height: auto;
-            border: 1px solid #000;
+            padding: 20px;
+            margin: 20px;
             border-radius: 5px;
         }
-        
 
+        footer {
+            background-color: #1a2a44;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* li {
+            display: inline-block;
+            width: 100px;
+        } */
+
+        h1 {
+            text-align: center;
+            font-family: Georgia, serif;
+            color: #ffffff;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        a {
+            color: #eb0000;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #00f0fc;
+            padding: 8px;
+            color: #00b7eb;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 40% 40%;
+            justify-content: space-between;
+            align-items: center;
+            row-gap: 20px;
+            margin: 20px;
+        }
+
+        .grid img {
+            width: 50%;
+        }
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
     </style>
 </head>
 <body>
-    <h1>Tiểu điểm tướng</h1>
-    <p>Tướng liên minh.</p>
-    <h1 style="text-align: left;">Yasuo</h1>
-    <h1 style="text-align: left;">Tiểu sử:</h1>
-   <p style="text-align: left;">-Một người Ionia đầy kiên định, chàng kiếm sĩ Yasuo được rèn luyện để sử dụng gió làm vũ khí tấn công kẻ thù. Khi còn trẻ, anh bị kết oan tội sát hại sư phụ - không thể chứng minh mình vô tội, anh buộc phải xuống tay với chính anh trai để tự vệ.</p>
-   <h1 style="text-align: left;">Gallery:</h1>
-    <div class="gallery">
-        <img src="https://cdn.gameleap.com/images/articles/art_pmQpd5WJPq/feature/1x.webp" alt="Image 1">
-        <img src="https://www.pcgamesn.com/wp-content/sites/pcgamesn/2024/01/league-of-legends-lol-yasuo-skin-old-forseen-season-14.jpg" alt="Image 2">
-        <img src="https://img6.thuthuatphanmem.vn/uploads/2022/04/15/anh-nen-tuong-yasuo-4k_040627692.jpg" alt="Image 3">
-        <img src="https://images5.alphacoders.com/131/1311515.jpeg" alt="Image 4">
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
+    <header>
+        <h1>League of Legends</h1>
+    </header>
+    <nav>
+        <img src="https://th.bing.com/th/id/OIP.1P3UxU5UvfPoscIKwJyzcwAAAA?r=0&w=350&h=368&rs=1&pid=ImgDetMain" alt="League Logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="champions.html">Champions</a></li>
+            <li><a href="esports.html">Esports</a></li>
+        </ul>
+    </nav>
+    <main id="main-content">
+        <h2>Welcome to Summoner's Rift</h2>
+        <p>Some memory skin.</p>
+        <div class="grid">
+            <img src="https://hoiquancaothu.com/images/skins/lien-minh/portrait/diana-huyet-nguyet.jpg" alt="Champion Icon 1">
+            <img src="https://th.bing.com/th/id/OIP.Q_7Qxp7LUAnM-dbZrd_81gHaEn?r=0&rs=1&pid=ImgDetMain" alt="Champion Icon 2">
         </div>
+        <div class="flex">
+            <img src="https://th.bing.com/th/id/R.f3a1519ca2ee3a2082e361d1ecac4655?rik=jfKvRHEzVDpEtQ&pid=ImgRaw&r=0" alt="Game Mode 1">
+            <img src="https://cdn-img.thethao247.vn/upload/lenhung/2020/09/24/1-110720-1.jpg" alt="Game Mode 2">
+            <img src="https://cdn.tgdd.vn/Files/2023/11/08/1554396/3-101123-112354.jpg" alt="Game Mode 3">
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 Riot Games. All rights reserved.</p>
+    </footer>
 </body>
 </html>
