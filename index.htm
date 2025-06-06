@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Liên Minh Huyền Thoại Preview</title>
+  <style>
+    #image {
+      height: 300px;
+      width: 500px;
+      border: 1px solid black;
+      background-color: #eee;
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      line-height: 300px;
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 20px;
+      transition: background-image 0.3s ease;
+      user-select: none;
+    }
+
+    img.preview {
+      width: 100px;
+      margin: 5px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    img.preview:hover {
+      border-color: #007acc;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Di chuột vào một tướng để xem chi tiết</h2>
+  <div id="image">Hover over an image below to display here.</div>
+
+  <img class="preview" src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Ahri_0.jpg" 
+       alt="Ahri - Hồ ly chín đuôi" onmouseover="upDate(this)" onmouseout="undo()">
+
+  <img class="preview" src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Yasuo_0.jpg" 
+       alt="Yasuo - Kẻ bất dung thứ" onmouseover="upDate(this)" onmouseout="undo()">
+
+  <img class="preview" src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Jinx_0.jpg" 
+       alt="Jinx - Khẩu pháo nổi loạn" onmouseover="upDate(this)" onmouseout="undo()">
+
+  <script>
+    function upDate(previewPic) {
+      console.log("Hover triggered");
+      console.log("Alt:", previewPic.alt);
+      console.log("Source:", previewPic.src);
+
+      let imageDiv = document.getElementById("image");
+      imageDiv.style.backgroundImage = "url('" + previewPic.src + "')";
+      imageDiv.innerText = previewPic.alt;
+    }
+
+    function undo() {
+      let imageDiv = document.getElementById("image");
+      imageDiv.style.backgroundImage = "url('')";
+      imageDiv.innerText = "Hover over an image below to display here.";
+    }
+  </script>
+
+</body>
+</html>
